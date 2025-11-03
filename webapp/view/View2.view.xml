@@ -1,0 +1,11 @@
+<mvc:View controllerName="mayank.ui5.project1.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:a="sap.ui.core"
+    xmlns="sap.m">
+    <Page id="page" title="This is Second View">
+    <Input text="Selected Name" value="{globalData>empname}"/>
+     <Input text="Selected Id" value="{globalData>empid}"/>
+      <Input text="Selected Marks" value="{globalData>marks}"/>
+    </Page>
+</mvc:View>

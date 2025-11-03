@@ -1,0 +1,75 @@
+<mvc:View controllerName="mayank.ui5.project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:a="sap.ui.core"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <Button text="Go to Second View" press="goToView2"/>
+     
+    <SearchField id="s1" search="onSearch"/>
+    <Text id="t2t2" text="{def>/city/0/name}" />
+    <Input
+  id="empInput"
+  showValueHelp="true"
+  valueHelpRequest="onValueHelpRequest" />
+    <List id="lid" items="{globalData>/details}"  delete="onDelete" mode="SingleSelectMaster" itemPress="myListPress">
+    <StandardListItem  title = "{globalData>empname}" description="{globalData>marks}" type="Navigation"  ></StandardListItem>
+
+    </List>
+    <f:SimpleForm title="this is simple form">
+
+
+  
+    <Label text="Purchase Org"/>
+    <Input id="id5"/>
+       <Label text="Material"/>
+    <Input id="id6"/>
+
+       <Label text="" />
+    <HBox justifyContent="End">
+      <Button text="Save" press="onSave" />
+      <Button text="Cancel" press="onCancel" />
+    </HBox>
+  
+        <f:toolbar>
+   <Toolbar>
+        <ToolbarSpacer />
+        <Button text="Save" press="onSave" />
+        <Button text="Cancel" press="onCancel" />
+      </Toolbar>
+    </f:toolbar>
+
+
+    </f:SimpleForm>
+    <Button id = "but1" text="I am a Button" press="myPress"/>
+    <Input id="id1" value="{abc>/empid}" enabled="{abc>/show}" />
+        <Input id="id2" value="{abc>/empname}" />
+   <Input id="id3" value="{=${abc>/empname}==='Maynk'?'This is correct':'This is not correct'}"/>
+  <Input id="id4"  />
+        <Table id="myTab" items="{/details}">
+
+        <columns>
+       <Column>
+       <Text text="Empid"/>
+       </Column>
+     
+       <Column>
+             <Text text="Empname"/>
+       </Column>
+            
+       <Column>
+             <Text text="Marks"/>
+       </Column>
+        </columns>
+        <items>
+        <ColumnListItem >
+        <cells>
+        <Text id="t1" text="{empid}"/>
+          <Text id="t2" text="{empname}"/>
+                  <Text id="t3" text="{ path : 'marks', formatter : '.oFormatter.oControl1'}"/>
+        </cells>
+        </ColumnListItem>
+        </items>
+        </Table>
+    </Page>
+</mvc:View>

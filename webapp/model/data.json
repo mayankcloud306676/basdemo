@@ -1,0 +1,19 @@
+{
+    "details": [
+        {
+            "empid": 100,
+            "empname": "Mayank",
+            "marks": 90
+        },
+        {
+            "empid": 200,
+            "empname": "Sachin",
+            "marks": 90
+        },
+        {
+            "empid": 300,
+            "empname": "Rachin",
+            "marks": 10
+        }
+    ]
+}
